@@ -1,7 +1,8 @@
 import torch
 import sounddevice as sd
 import time
-
+import torchaudio
+import torchaudio
 
 language = 'ru'
 model_id = 'ru_v3'
