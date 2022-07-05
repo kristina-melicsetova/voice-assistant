@@ -17,13 +17,11 @@ model, _ = torch.hub.load(repo_or_dir='snakers4/silero-models',
                           language=language,
                           speaker=model_id)
 
-model.to(device)
-audio = model.apply_tts(text=text,
+text=example_text,
                         speaker=speaker,
                         sample_rate=sample_rate,
                         put_accent=put_accent,
                         put_yo=put_yo)
-# воспроизводим
 print(text)
 
 sd.play(audio, sample_rate)
