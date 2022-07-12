@@ -10,3 +10,8 @@ q = queue.Queue()
 
 
 # q = queue.Queue()
+def callback(indata, frames, time, status):
+    if status:
+        print(status, file=sys.stderr)
+    q.put(bytes(indata))
+
