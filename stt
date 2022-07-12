@@ -1,0 +1,12 @@
+import vosk
+import sys
+import sounddevice as sd
+import queue
+
+model = vosk.Model("model")
+samplerate = 16000
+device = 6
+q = queue.Queue()
+
+
+# q = queue.Queue()
